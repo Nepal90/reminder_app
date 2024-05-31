@@ -114,7 +114,7 @@ class _AddEditReminderScreenState extends State<AddEditReminderScreen> {
                   onPressed: () {
                     context
                         .read<ReminderBloc>()
-                        .add(DeleteReminder(widget.reminder!.id));
+                        .add(DeleteExistingReminder(widget.reminder!.id));
                     Navigator.pop(context);
                   },
                   child: Text('Delete'),
