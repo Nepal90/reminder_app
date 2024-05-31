@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           getReminders: GetReminders(reminderRepository),
           addReminder: AddReminder(reminderRepository),
           editReminder: EditReminder(reminderRepository),
-          deleteReminder: DeleteReminder(reminderRepository as String),
+          deleteReminder: DeleteReminder(reminderRepository),
           notificationService: notificationService,
         )..add(LoadReminders()),
         child: ReminderList(),

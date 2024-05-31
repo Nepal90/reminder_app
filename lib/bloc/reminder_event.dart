@@ -23,8 +23,8 @@ class EditExistingReminder extends ReminderEvent {
   const EditExistingReminder(this.reminder);
 }
 
-class DeleteReminder extends ReminderEvent {
+class DeleteExistingReminder extends ReminderEvent {
   final String id;
 
-  const DeleteReminder(this.id);
+  const DeleteExistingReminder(this.id);
 }

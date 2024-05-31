@@ -56,9 +56,9 @@ class ReminderBloc extends Bloc<ReminderEvent, ReminderState> {
       }
     });
 
-    on<DeleteReminder>((event, emit) async {
+    on<DeleteExistingReminder>((event, emit) async {
       try {
-        await deleteReminder;
+        await deleteReminder(event.id);
         final reminders = await getReminders();
         emit(RemindersLoaded(reminders));
       } catch (e) {
